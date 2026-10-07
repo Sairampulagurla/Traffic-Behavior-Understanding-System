@@ -1,0 +1,531 @@
+{
+    "project": {
+        "name": "Traffic Behavior Understanding System",
+        "scenario": "Fixed-camera traffic analysis"
+    },
+    "summary": {
+        "unique_entities": 4,
+        "vehicles": 4,
+        "people": 0,
+        "total_events": 4,
+        "event_counts": {
+            "BRAKING_IN_QUEUE": 1,
+            "POSSIBLE_COLLISION": 1,
+            "SUDDEN_STOP": 2
+        }
+    },
+    "events": [
+        {
+            "event_id": 1,
+            "start_s": 1.98,
+            "end_s": 3.46,
+            "id": 1,
+            "other_id": null,
+            "cls": "car",
+            "type": "BRAKING_IN_QUEUE",
+            "severity": "info",
+            "confidence": null,
+            "status": "NORMAL",
+            "reason": "speed fell from 1.98 to 0.15 in 1.5s; 2 of 3 other vehicles also stopped",
+            "entity_id": 1
+        },
+        {
+            "event_id": 2,
+            "start_s": 2.15,
+            "end_s": 4.03,
+            "id": 1,
+            "other_id": 4.0,
+            "cls": "car",
+            "type": "POSSIBLE_COLLISION",
+            "severity": "low",
+            "confidence": "low",
+            "status": "REVIEW",
+            "reason": "boxes overlapped from 00:02.1 (overlap 54%, ground points 0.8 vehicle-sizes apart); ID 1 speed fell from 3.05 to 0.50; 1 of 2 other vehicles kept moving nearby",
+            "entity_id": 1
+        },
+        {
+            "event_id": 3,
+            "start_s": 2.42,
+            "end_s": 2.89,
+            "id": 2,
+            "other_id": null,
+            "cls": "car",
+            "type": "SUDDEN_STOP",
+            "severity": "medium",
+            "confidence": null,
+            "status": "UNUSUAL",
+            "reason": "speed fell from 1.50 to 0.14 in 0.5s while 2 of 3 other vehicles kept moving",
+            "entity_id": 2
+        },
+        {
+            "event_id": 4,
+            "start_s": 2.45,
+            "end_s": 2.82,
+            "id": 3,
+            "other_id": null,
+            "cls": "car",
+            "type": "SUDDEN_STOP",
+            "severity": "medium",
+            "confidence": null,
+            "status": "UNUSUAL",
+            "reason": "speed fell from 1.02 to 0.13 in 0.4s while 3 of 3 other vehicles kept moving",
+            "entity_id": 3
+        }
+    ],
+    "entities": [
+        {
+            "id": 1,
+            "class": "car",
+            "t_start": 0.0,
+            "t_end": 4.03,
+            "duration_s": 4.03,
+            "median_speed": 1.788,
+            "max_speed": 3.047,
+            "moving_fraction": 0.84,
+            "heading_deg": 165.1,
+            "longest_still_s": 0.57,
+            "still_from_s": 3.46,
+            "behavior": "REVIEW",
+            "events": [
+                {
+                    "event_id": 1,
+                    "start_s": 1.98,
+                    "end_s": 3.46,
+                    "id": 1,
+                    "other_id": null,
+                    "cls": "car",
+                    "type": "BRAKING_IN_QUEUE",
+                    "severity": "info",
+                    "confidence": null,
+                    "status": "NORMAL",
+                    "reason": "speed fell from 1.98 to 0.15 in 1.5s; 2 of 3 other vehicles also stopped",
+                    "entity_id": 1
+                },
+                {
+                    "event_id": 2,
+                    "start_s": 2.15,
+                    "end_s": 4.03,
+                    "id": 1,
+                    "other_id": 4.0,
+                    "cls": "car",
+                    "type": "POSSIBLE_COLLISION",
+                    "severity": "low",
+                    "confidence": "low",
+                    "status": "REVIEW",
+                    "reason": "boxes overlapped from 00:02.1 (overlap 54%, ground points 0.8 vehicle-sizes apart); ID 1 speed fell from 3.05 to 0.50; 1 of 2 other vehicles kept moving nearby",
+                    "entity_id": 1
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "class": "car",
+            "t_start": 0.0,
+            "t_end": 4.03,
+            "duration_s": 4.03,
+            "median_speed": 0.391,
+            "max_speed": 1.497,
+            "moving_fraction": 0.81,
+            "heading_deg": 50.2,
+            "longest_still_s": 0.3,
+            "still_from_s": 3.73,
+            "behavior": "UNUSUAL",
+            "events": [
+                {
+                    "event_id": 3,
+                    "start_s": 2.42,
+                    "end_s": 2.89,
+                    "id": 2,
+                    "other_id": null,
+                    "cls": "car",
+                    "type": "SUDDEN_STOP",
+                    "severity": "medium",
+                    "confidence": null,
+                    "status": "UNUSUAL",
+                    "reason": "speed fell from 1.50 to 0.14 in 0.5s while 2 of 3 other vehicles kept moving",
+                    "entity_id": 2
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "class": "car",
+            "t_start": 0.0,
+            "t_end": 4.03,
+            "duration_s": 4.03,
+            "median_speed": 0.202,
+            "max_speed": 1.016,
+            "moving_fraction": 0.61,
+            "heading_deg": 69.0,
+            "longest_still_s": 0.44,
+            "still_from_s": 2.82,
+            "behavior": "UNUSUAL",
+            "events": [
+                {
+                    "event_id": 4,
+                    "start_s": 2.45,
+                    "end_s": 2.82,
+                    "id": 3,
+                    "other_id": null,
+                    "cls": "car",
+                    "type": "SUDDEN_STOP",
+                    "severity": "medium",
+                    "confidence": null,
+                    "status": "UNUSUAL",
+                    "reason": "speed fell from 1.02 to 0.13 in 0.4s while 3 of 3 other vehicles kept moving",
+                    "entity_id": 3
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "class": "car",
+            "t_start": 0.0,
+            "t_end": 3.76,
+            "duration_s": 3.76,
+            "median_speed": 1.673,
+            "max_speed": 2.547,
+            "moving_fraction": 0.99,
+            "heading_deg": 78.6,
+            "longest_still_s": 0.0,
+            "still_from_s": null,
+            "behavior": "NORMAL",
+            "events": []
+        }
+    ],
+    "scene": {
+        "video_size": [
+            1786,
+            1246
+        ],
+        "n_tracks": 4,
+        "n_moving_samples": 366,
+        "reliability": "weak (use default rule thresholds)",
+        "flow_modes": [
+            {
+                "angle_deg": 167.6,
+                "share": 0.28,
+                "concentration": 0.88
+            },
+            {
+                "angle_deg": 64.7,
+                "share": 0.72,
+                "concentration": 0.91
+            }
+        ],
+        "two_way": true,
+        "speed_by_class": {
+            "car": {
+                "median": 0.725,
+                "mad": 0.746,
+                "fast_threshold": 2.964,
+                "samples": 366
+            }
+        },
+        "stops": {
+            "n_stopped_tracks": 0,
+            "median_stop_s": null,
+            "stop_alert_s": 5.0,
+            "source": "default (too few stops to learn)"
+        },
+        "grid_cell_px": 59,
+        "road_cells": [
+            [
+                8,
+                7
+            ],
+            [
+                8,
+                8
+            ],
+            [
+                8,
+                9
+            ],
+            [
+                8,
+                10
+            ],
+            [
+                8,
+                18
+            ],
+            [
+                9,
+                11
+            ],
+            [
+                9,
+                12
+            ],
+            [
+                9,
+                13
+            ],
+            [
+                9,
+                14
+            ],
+            [
+                9,
+                15
+            ],
+            [
+                9,
+                16
+            ],
+            [
+                9,
+                17
+            ],
+            [
+                9,
+                20
+            ],
+            [
+                9,
+                21
+            ],
+            [
+                10,
+                7
+            ],
+            [
+                10,
+                8
+            ],
+            [
+                11,
+                9
+            ],
+            [
+                11,
+                14
+            ],
+            [
+                12,
+                9
+            ],
+            [
+                12,
+                10
+            ],
+            [
+                12,
+                13
+            ],
+            [
+                12,
+                14
+            ],
+            [
+                13,
+                11
+            ],
+            [
+                13,
+                13
+            ],
+            [
+                14,
+                12
+            ],
+            [
+                15,
+                12
+            ],
+            [
+                16,
+                12
+            ],
+            [
+                17,
+                12
+            ],
+            [
+                18,
+                12
+            ],
+            [
+                19,
+                12
+            ],
+            [
+                20,
+                12
+            ],
+            [
+                21,
+                12
+            ],
+            [
+                22,
+                12
+            ],
+            [
+                23,
+                12
+            ],
+            [
+                24,
+                12
+            ],
+            [
+                25,
+                12
+            ],
+            [
+                26,
+                12
+            ]
+        ],
+        "road_area_fraction": 0.054,
+        "local_flow": {
+            "8,7": [
+                88.8,
+                1.0,
+                7
+            ],
+            "8,8": [
+                80.4,
+                0.99,
+                20
+            ],
+            "8,9": [
+                78.2,
+                1.0,
+                15
+            ],
+            "8,10": [
+                76.6,
+                1.0,
+                8
+            ],
+            "9,11": [
+                70.5,
+                1.0,
+                7
+            ],
+            "9,12": [
+                77.9,
+                1.0,
+                6
+            ],
+            "9,13": [
+                96.6,
+                1.0,
+                5
+            ],
+            "9,14": [
+                99.7,
+                1.0,
+                6
+            ],
+            "9,15": [
+                95.4,
+                1.0,
+                5
+            ],
+            "9,21": [
+                9.0,
+                0.94,
+                10
+            ],
+            "10,7": [
+                42.8,
+                0.95,
+                9
+            ],
+            "10,8": [
+                73.8,
+                0.83,
+                54
+            ],
+            "11,9": [
+                51.4,
+                0.97,
+                24
+            ],
+            "11,14": [
+                140.1,
+                0.58,
+                24
+            ],
+            "12,9": [
+                52.0,
+                1.0,
+                15
+            ],
+            "12,10": [
+                55.7,
+                0.99,
+                24
+            ],
+            "12,13": [
+                127.8,
+                0.73,
+                12
+            ],
+            "13,11": [
+                42.8,
+                0.86,
+                29
+            ],
+            "14,12": [
+                173.1,
+                1.0,
+                5
+            ],
+            "22,12": [
+                178.3,
+                1.0,
+                5
+            ],
+            "23,12": [
+                178.3,
+                1.0,
+                5
+            ],
+            "25,12": [
+                -178.2,
+                0.99,
+                6
+            ],
+            "26,12": [
+                -173.0,
+                1.0,
+                5
+            ]
+        },
+        "track_preview": [
+            {
+                "id": 1,
+                "class": "car",
+                "heading": 165.1,
+                "flow": 0,
+                "deviation_deg": 2.5
+            },
+            {
+                "id": 2,
+                "class": "car",
+                "heading": 50.2,
+                "flow": 1,
+                "deviation_deg": 14.5
+            },
+            {
+                "id": 3,
+                "class": "car",
+                "heading": 69.0,
+                "flow": 1,
+                "deviation_deg": 4.3
+            },
+            {
+                "id": 4,
+                "class": "car",
+                "heading": 78.6,
+                "flow": 1,
+                "deviation_deg": 13.9
+            }
+        ]
+    }
+}

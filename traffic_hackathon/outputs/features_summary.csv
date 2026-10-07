@@ -1,0 +1,5 @@
+id,class,t_start,t_end,duration_s,median_speed,max_speed,moving_fraction,heading_deg,longest_still_s,still_from_s
+1,car,0.0,4.03,4.03,1.788,3.047,0.84,165.1,0.57,3.46
+2,car,0.0,4.03,4.03,0.391,1.497,0.81,50.2,0.3,3.73
+3,car,0.0,4.03,4.03,0.202,1.016,0.61,69.0,0.44,2.82
+4,car,0.0,3.76,3.76,1.673,2.547,0.99,78.6,0.0,

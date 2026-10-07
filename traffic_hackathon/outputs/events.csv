@@ -1,0 +1,5 @@
+event_id,start_s,end_s,id,other_id,cls,type,severity,confidence,status,reason
+1,1.98,3.46,1,,car,BRAKING_IN_QUEUE,info,,NORMAL,speed fell from 1.98 to 0.15 in 1.5s; 2 of 3 other vehicles also stopped
+2,2.15,4.03,1,4.0,car,POSSIBLE_COLLISION,low,low,REVIEW,"boxes overlapped from 00:02.1 (overlap 54%, ground points 0.8 vehicle-sizes apart); ID 1 speed fell from 3.05 to 0.50; 1 of 2 other vehicles kept moving nearby"
+3,2.42,2.89,2,,car,SUDDEN_STOP,medium,,UNUSUAL,speed fell from 1.50 to 0.14 in 0.5s while 2 of 3 other vehicles kept moving
+4,2.45,2.82,3,,car,SUDDEN_STOP,medium,,UNUSUAL,speed fell from 1.02 to 0.13 in 0.4s while 3 of 3 other vehicles kept moving
