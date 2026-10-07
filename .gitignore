@@ -1,0 +1,17 @@
+# YOLO model weights
+*.pt
+
+# Python
+__pycache__/
+*.pyc
+
+# Virtual environment
+venv/
+.venv/
+
+# Generated files
+outputs/*
+uploads/*
+
+# Temporary files
+*.tmp
