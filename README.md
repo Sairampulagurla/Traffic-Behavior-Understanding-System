@@ -21,52 +21,19 @@ WHO → WHEN → WHAT HAPPENED → WHY IT WAS FLAGGED
 
 💡 Solution Overview
 
-The system accepts a fixed-camera traffic video as input and processes it through multiple stages.
 
-Traffic Video
-      │
-      ▼
-┌──────────────────────┐
-│ Object Detection     │
-│ YOLO11s               │
-└──────────┬───────────┘
-           ▼
-┌──────────────────────┐
-│ Multi-Object Tracking│
-│ ByteTrack             │
-└──────────┬───────────┘
-           ▼
-┌──────────────────────┐
-│ Feature Extraction   │
-│ Speed / Heading /    │
-│ Position / Stops     │
-└──────────┬───────────┘
-           ▼
-┌──────────────────────┐
-│ Scene Analysis       │
-│ Traffic Baselines    │
-│ Flow / Stop Patterns │
-└──────────┬───────────┘
-           ▼
-┌──────────────────────┐
-│ Behavior Reasoning   │
-│ Rule-based Analysis  │
-└──────────┬───────────┘
-           ▼
-┌──────────────────────┐
-│ Collision Reasoning  │
-│ Contact + Motion     │
-│ Change + Stopping    │
-└──────────┬───────────┘
-           ▼
-┌──────────────────────┐
-│ Event Report         │
-│ WHO / WHEN / WHY     │
-└──────────┬───────────┘
-           ▼
-┌──────────────────────┐
-│ Streamlit Dashboard  │
-└──────────────────────┘
+The system accepts a fixed-camera traffic video as input and processes it through multiple stages:
+
+mermaid
+flowchart TD
+    A[Traffic Video] --> B[Object Detection<br/>YOLO11s]
+    B --> C[Multi-Object Tracking<br/>ByteTrack]
+    C --> D[Feature Extraction<br/>Speed • Heading • Position • Stops]
+    D --> E[Scene Analysis<br/>Traffic Baselines • Flow • Stop Patterns]
+    E --> F[Behavior Reasoning<br/>Rule-Based Analysis]
+    F --> G[Collision Reasoning<br/>Contact • Motion • Speed • Stopping]
+    G --> H[Event Report<br/>WHO • WHEN • WHY]
+    H --> I[Streamlit Dashboard]
 🧠 Core Model and Reasoning
 1. Object Detection
 
