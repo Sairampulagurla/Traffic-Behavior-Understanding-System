@@ -24,7 +24,7 @@ WHO → WHEN → WHAT HAPPENED → WHY IT WAS FLAGGED
 
 The system accepts a fixed-camera traffic video as input and processes it through multiple stages:
 
-mermaid
+```mermaid
 flowchart TD
     A[Traffic Video] --> B[Object Detection<br/>YOLO11s]
     B --> C[Multi-Object Tracking<br/>ByteTrack]
